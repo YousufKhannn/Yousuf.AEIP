@@ -4,9 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Resorces</title>
     <script src="main.js"></script>
     <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        .resources,
+        .syllabus,
+        .notes {
+            display: none;
+        }
+        
+        .show-resources,
+        .show-syllabus,
+        .show-notes {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
@@ -29,90 +65,221 @@
                 onclick="showmenu();">
         </nav>
 
-        <h1>Access Your <br> Resorces</h1>
+        <h1>Engineering Resources <br> Access Table</h1>
     </section>
 
     <!-- **********************About us content***************************** -->
 
-    <section class="about-us">
-        <div class="row">
-            <div class="about-col">
-                <h1>Information Science Engg</h1>
-                <h3>Grab Resorces</h3>
+    <h2></h2>
 
-            </div>
-            <div class="about-col">
-                <a href="#" class="hero-btn red-btn" id="btn">View Resorces</a>
-            </div>
+
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Engineering Branch</th>
+                <th>Resources</th>
+                <th>Syllabus</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Computer Science</td>
+                <td>
+                    <span class="show-resources" onclick="toggleContent('computer', 'resources')">Show Resources</span>
+                    <ul class="resources" id="computer-resources">
+                        <li>Resource 1</li>
+                        <li>Resource 2</li>
+                        <li>Resource 3</li>
+                    </ul>
+                </td>
+                <td>
+                    <span class="show-syllabus" onclick="toggleContent('computer', 'syllabus')">Show Syllabus</span>
+                    <ul class="syllabus" id="computer-syllabus"><br>
+                        <li>1 & 2 semester <a href="https://dtek.karnataka.gov.in/storage/pdf-files/C-20%20syllabus/C_20_CSE_1_2_Sem.pdf" target="_blank"> View</a></li><br>
+                        <li>3 & 4 semester <a href="https://dtek.karnataka.gov.in/storage/pdf-files/C-20%20syllabus/C_20_CS_3_4_Sem.pdf" target="_blank"> View</a></li><br>
+                        <li>5 & 6 semester <a href="https://dtek.karnataka.gov.in/storage/pdf-files/CDC/C20_5_6_sem_CSE.pdf" target="_blank">View</a></li><br>
+                    </ul>
+                </td>
+                <td>
+                    <span class="show-notes" onclick="toggleContent('computer', 'notes')">Show Notes</span>
+                    <ul class="notes" id="computer-notes">
+                        <li>Note 1</li>
+                        <li>Note 2</li>
+                        <li>Note 3</li>
+                    </ul>
+                </td>
+            </tr>
+            <!-- Repeat the above structure for other engineering branches -->
+
+            <tr>
+                <td>Electrical Engineering</td>
+                <td>
+                    <span class="show-resources" onclick="toggleContent('electrical', 'resources')">Show Resources</span>
+                    <ul class="resources" id="electrical-resources">
+                        <li>Resource 1</li>
+                        <li>Resource 2</li>
+                        <li>Resource 3</li>
+                    </ul>
+                </td>
+                <td>
+                    <span class="show-syllabus" onclick="toggleContent('electrical', 'syllabus')">Show Syllabus</span>
+                    <ul class="syllabus" id="electrical-syllabus">
+                        <li>Topic 1</li>
+                        <li>Topic 2</li>
+                        <li>Topic 3</li>
+                    </ul>
+                </td>
+                <td>
+                    <span class="show-notes" onclick="toggleContent('electrical', 'notes')">Show Notes</span>
+                    <ul class="notes" id="electrical-notes">
+                        <li>Note 1</li>
+                        <li>Note 2</li>
+                        <li>Note 3</li>
+                    </ul>
+                </td>
+            </tr>
+            <!-- Repeat the above structure for other engineering branches -->
+
+            <tr>
+                <td>Civil Engineering</td>
+                <td>
+                    <span class="show-resources" onclick="toggleContent('civil', 'resources')">Show Resources</span>
+                    <ul class="resources" id="civil-resources">
+                        <li>Resource 1</li>
+                        <li>Resource 2</li>
+                        <li>Resource 3</li>
+                    </ul>
+                </td>
+                <td>
+                    <span class="show-syllabus" onclick="toggleContent('civil', 'syllabus')">Show Syllabus</span>
+                    <ul class="syllabus" id="civil-syllabus">
+                        <li>Topic 1</li>
+                        <li>Topic 2</li>
+                        <li>Topic 3</li>
+                    </ul>
+                </td>
+                <td>
+                    <span class="show-notes" onclick="toggleContent('civil', 'notes')">Show Notes</span>
+                    <ul class="notes" id="civil-notes">
+                        <li>Note 1</li>
+                        <li>Note 2</li>
+                        <li>Note 3</li>
+                    </ul>
+                </td>
+            </tr>
+            <!-- Repeat the above structure for other engineering branches -->
+
+            <tr>
+                <td>Electrical & Electronics Communication</td>
+                <td>
+                    <span class="show-resources" onclick="toggleContent('e&c', 'resources')">Show Resources</span>
+                    <ul class="resources" id="e&c-resources">
+                        <li>Resource 1</li>
+                        <li>Resource 2</li>
+                        <li>Resource 3</li>
+                    </ul>
+                </td>
+                <td>
+                    <span class="show-syllabus" onclick="toggleContent('e&c', 'syllabus')">Show Syllabus</span>
+                    <ul class="syllabus" id="e&c-syllabus">
+                        <li>Topic 1</li>
+                        <li>Topic 2</li>
+                        <li>Topic 3</li>
+                    </ul>
+                </td>
+                <td>
+                    <span class="show-notes" onclick="toggleContent('e&c', 'notes')">Show Notes</span>
+                    <ul class="notes" id="e&c-notes">
+                        <li>Note 1</li>
+                        <li>Note 2</li>
+                        <li>Note 3</li>
+                    </ul>
+                </td>
+            </tr>
+            <!-- Repeat the above structure for other engineering branches -->
+
+            <tr>
+                <td>Machinical Engineering</td>
+                <td>
+                    <span class="show-resources" onclick="toggleContent('machinical', 'resources')">Show Resources</span>
+                    <ul class="resources" id="machinical-resources">
+                        <li>Resource 1</li>
+                        <li>Resource 2</li>
+                        <li>Resource 3</li>
+                    </ul>
+                </td>
+                <td>
+                    <span class="show-syllabus" onclick="toggleContent('machinical', 'syllabus')">Show Syllabus</span>
+                    <ul class="syllabus" id="machinical-syllabus">
+                        <li>Topic 1</li>
+                        <li>Topic 2</li>
+                        <li>Topic 3</li>
+                    </ul>
+                </td>
+                <td>
+                    <span class="show-notes" onclick="toggleContent('machinical', 'notes')">Show Notes</span>
+                    <ul class="notes" id="machinical-notes">
+                        <li>Note 1</li>
+                        <li>Note 2</li>
+                        <li>Note 3</li>
+                    </ul>
+                </td>
+            </tr>
+            <!-- Repeat the above structure for other engineering branches -->
+
+            <tr>
+                <td>PUC Science</td>
+                <td>
+                    <span class="show-resources" onclick="toggleContent('puc', 'resources')">Show Resources</span>
+                    <ul class="resources" id="puc-resources">
+                        <li>Resource 1</li>
+                        <li>Resource 2</li>
+                        <li>Resource 3</li>
+                    </ul>
+                </td>
+                <td>
+                    <span class="show-syllabus" onclick="toggleContent('puc', 'syllabus')">Show Syllabus</span>
+                    <ul class="syllabus" id="puc-syllabus">
+                        <li>Topic 1</li>
+                        <li>Topic 2</li>
+                        <li>Topic 3</li>
+                    </ul>
+                </td>
+                <td>
+                    <span class="show-notes" onclick="toggleContent('puc', 'notes')">Show Notes</span>
+                    <ul class="notes" id="puc-notes">
+                        <li>Note 1</li>
+                        <li>Note 2</li>
+                        <li>Note 3</li>
+                    </ul>
+                </td>
+            </tr>
+            <!-- Repeat the above structure for other engineering branches -->
+        </tbody>
+    </table>
+
+
+
+    <div class="row">
+        <div class="about-col">
+            <a href="Upload-notes.html" class="hero-btn red-btn" id="btn">Upload QP..</a>
         </div>
+        <div class="about-col">
 
-
-        <div class="row">
-            <div class="about-col">
-                <h1>Computer Science Engg</h1>
-                <h3>Grab Resorces</h3>
-
-            </div>
-            <div class="about-col">
-                <a href="computer-documents.html" class="hero-btn red-btn" id="btn">View Resorces</a>
-            </div>
         </div>
+    </div>
 
-        <div class="row">
-            <div class="about-col">
-                <h1>Eletrical Department</h1>
-                <h3>Grab Resorces</h3>
-
-            </div>
-            <div class="about-col">
-                <a href="#" class="hero-btn red-btn" id="btn">View Resorces</a>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="about-col">
-                <h1>Machinical Engg</h1>
-                <h3>Grab Resorces</h3>
-
-            </div>
-            <div class="about-col">
-                <a href="#" class="hero-btn red-btn" id="btn">View Resorces</a>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="about-col">
-                <h1>Civil Engg</h1>
-                <h3>Grab Resorces</h3>
-
-            </div>
-            <div class="about-col">
-                <a href="#" class="hero-btn red-btn" id="btn">View Resorces</a>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="about-col">
-                <a href="Upload-notes.html" class="hero-btn red-btn" id="btn">Upload Your Notes</a>
-            </div>
-            <div class="about-col">
-
-            </div>
-        </div>
     </section>
     <!-- Footer  -->
     <div class="b-top">
         <center>
 
             <button id="backToTopBtn">Back to Top</button>
-
-
     </div>
     </center>
-
-
-
     <section class="footer">
         <h4>About Us</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Blanditiis doloremque autem nostrum earum ratione, perferendis fuga enim nihil ullam et dolorem veritatis ipsum est illum eaque similique odit, molestiae sequi?</p>
@@ -126,7 +293,16 @@
         <p> Phone No.08372-232212,237412 cell:9448236321</p>
         <p>Designed by 💖 Yousufkhan</p>
     </section>
-
+    <script>
+        function toggleContent(branch, content) {
+            var element = document.getElementById(`${branch}-${content}`);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
 
 
 
