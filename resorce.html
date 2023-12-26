@@ -42,9 +42,23 @@
             color: blue;
             text-decoration: underline;
         }
+         @media only screen and (max-width: 768px) {
+            th,
+            td {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+        
+        @media only screen and (max-width: 480px) {
+            th,
+            td {
+                font-size: 12px;
+                padding: 6px;
+            }
+        }
     </style>
 </head>
-
 <body>
     <section class="sub-header">
         <nav>
